@@ -157,5 +157,4 @@ public class MainActivity extends Activity implements OnInitListener {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-
 }
