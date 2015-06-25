@@ -68,7 +68,15 @@ public class MainActivity extends Activity implements OnInitListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*tts*/
+        tts = new TextToSpeech(this, this);
+        ((Button) findViewById(R.id.bSpeak)).setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                speakOut(((TextView) findViewById(R.id.tvTranslatedText)).getText().toString());
+            }
+        });
 
         ((Button) findViewById(R.id.bTranslate)).setOnClickListener(new OnClickListener() {
 
